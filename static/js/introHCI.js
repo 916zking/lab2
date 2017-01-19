@@ -15,4 +15,22 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+	$("a.thumbnail").click(projectClick);
 }
+
+function projectClick(e) {
+	e.preventDefault();
+	$(this).css("background-color", "#7fff00");
+}
+
+/*function projectClick(e) {
+	console.log("Project clicked");
+	// prevent the page from reloading
+	e.preventDefault();
+
+	// In an event handler, $(this) refers to the object that triggered the event
+	var projectTitle = $(this).find("p").text();
+	var jumbotronHeader = $("#jumbotron h1");
+	jumbotronHeader.text(projectTitle);
+	}
+	*/
